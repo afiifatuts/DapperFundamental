@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/drika/Documents/tsaani/dot-net/DapperFundamental/DapperFundamental/DapperFundamental.csproj": {}
+  },
+  "projects": {
+    "/Users/drika/Documents/tsaani/dot-net/DapperFundamental/DapperFundamental/DapperFundamental.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/drika/Documents/tsaani/dot-net/DapperFundamental/DapperFundamental/DapperFundamental.csproj",
+        "projectName": "DapperFundamental",
+        "projectPath": "/Users/drika/Documents/tsaani/dot-net/DapperFundamental/DapperFundamental/DapperFundamental.csproj",
+        "packagesPath": "/Users/drika/.nuget/packages/",
+        "outputPath": "/Users/drika/Documents/tsaani/dot-net/DapperFundamental/DapperFundamental/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/drika/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.143, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

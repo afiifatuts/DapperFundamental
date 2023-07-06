@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{A36B29EC-0F1D-4477-A1E0-E3B169EA30F9}|Default">
+  <MonoDevelop.Ide.ItemProperties.DapperFundamental PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DapperFundamental/Program.cs">
+    <Files>
+      <File FileName="DapperFundamental/Program.cs" Line="46" Column="22" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DapperFundamental" expanded="True">
+            <Node name="DapperFundamental" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
