@@ -114,6 +114,29 @@ namespace DapperFundamental
             {
                 Console.WriteLine(product);
             }
+
+
+            /*
+             Mixed Syntax
+             */
+
+            var filteredProducts =
+                (from product in products
+                 where product.ProductPrice > 100000 && product.ProductPrice < 250000
+                 select product).OrderByDescending(p => p);
+
+
+            // var filteredProducts =
+            //     (from product in products
+            //         where product.ProductPrice is > 100000 and < 2500000
+            //         select product).OrderByDescending(p => p.ProductName);
+
+            Console.WriteLine("Filtered");
+            foreach (var i in filteredProducts)
+            {
+                Console.WriteLine(i);
+
+            }
         }
     }
 }
