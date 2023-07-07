@@ -107,9 +107,9 @@ namespace DapperFundamental
             //pagination menggunakan LINQ
             var page = 2;
             var size = 2;
-            var productsPage = products.Skip((page - 1) * size).Take(size);
+            var productsPage = products.Page(page,size);
 
-             Console.WriteLine($"Page {page}");
+             Console.WriteLine($"Page menggunakan extention class {page}");
             foreach (var product in productsPage)
             {
                 Console.WriteLine(product);
@@ -131,12 +131,34 @@ namespace DapperFundamental
             //         where product.ProductPrice is > 100000 and < 2500000
             //         select product).OrderByDescending(p => p.ProductName);
 
-            Console.WriteLine("Filtered");
-            foreach (var i in filteredProducts)
-            {
-                Console.WriteLine(i);
+            //Console.WriteLine("Filtered");
+            //foreach (var i in filteredProducts)
+            //{
+            //    Console.WriteLine(i);
 
-            }
+            //}
+
+            var a = 10;
+            a.Plus(10);
+            Console.WriteLine(a);
+        }
+
+    }
+
+
+
+    //Extention Method
+    public static class MyExtentionMethod
+    {
+        public static int Plus(this int value, int parameter)
+        {
+            return value + parameter;
+        }
+
+        public static IEnumerable<T> Page<T>(this IEnumerable<T> datasouce, int page , int size)
+        {
+            return datasouce.Skip((page - 1) * size).Take(size);
         }
     }
+
 }
