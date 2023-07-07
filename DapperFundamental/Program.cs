@@ -1,7 +1,6 @@
 ﻿using System;
 using Npgsql;
 using Dapper;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace DapperFundamental
@@ -37,6 +36,7 @@ namespace DapperFundamental
 
             var connString = "Host=localhost;Username=postgres;Password=blimbeng38;Database=enigma_shop";
             using var connection = new NpgsqlConnection(connString);
+            DefaultTypeMap.MatchNamesWithUnderscores = true;
 
             //var sql = @"CREATE TABLE m_product(
             //id int primary key,
@@ -48,14 +48,34 @@ namespace DapperFundamental
             //VALUES (2,'Kemeja',2000000,10)";
             //connection.Execute(insert);
 
-            var select = "SELECT * FROM m_product";
+            /* var select = "SELECT * FROM m_product;";
 
-          var products = connection.Query(select).ToList();
-
+            var products = connection.Query<Product>(select).ToList();
             foreach (var product in products)
             {
                 Console.WriteLine(product);
             }
+            */
+
+            /*
+            Menampilkan Single Data:
+            - QuerySingle - Dynamic                     = Mengembalikan sat data berupa dynamic - Exception saat query kosong atau data lebih dari satu
+            - QuerySingle<T>                    
+            - QuerySingleOrDefault - Dynamic            = Mengambalikan saty data berupa dynamic - Exception saat query lebih dari satu data , kalau query kosong akan return null
+            - QuerySingleOrDefault<T>
+            - QueryFirst - Dynamic                      = Mengambalikan satu data berupa dynamic - Exception saat query itu kosong
+            - QueryFirst<T>
+            - QueryFirstOrDefault - Dynamic             = Mengembalikan satu kata berupa dynamic - tidak mengembalikan exception apapun, kalau query ksosong akan return null
+            - QueryFirstOrDefault<T>
+ 
+
+             */
+
+            var selectOne = "SELECT * FROM m_product WHERE id = 2";
+            var product = connection.QueryFirstOrDefault<Product>(selectOne);
+
+            Console.WriteLine(product);
+           
         }
     }
 }
