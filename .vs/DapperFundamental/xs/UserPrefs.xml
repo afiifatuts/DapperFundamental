@@ -2,9 +2,10 @@
   <MonoDevelop.Ide.ItemProperties.DapperFundamental PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="DapperFundamental/Program.cs">
     <Files>
-      <File FileName="DapperFundamental/Program.cs" Line="145" Column="1" />
-      <File FileName="DapperFundamental/Product.cs" Line="8" Column="19" />
-      <File FileName="DapperFundamental/DapperNotes.cs" Line="1" Column="1" />
+      <File FileName="DapperFundamental/Program.cs" Line="10" Column="6" />
+      <File FileName="DapperFundamental/Product.cs" />
+      <File FileName="DapperFundamental/DapperNotes.cs" />
+      <File FileName="DapperFundamental/LambdaNotes.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
