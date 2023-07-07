@@ -67,15 +67,82 @@ namespace DapperFundamental
             - QueryFirst<T>
             - QueryFirstOrDefault - Dynamic             = Mengembalikan satu kata berupa dynamic - tidak mengembalikan exception apapun, kalau query ksosong akan return null
             - QueryFirstOrDefault<T>
- 
 
-             */
 
             var selectOne = "SELECT * FROM m_product WHERE id = 2";
             var product = connection.QueryFirstOrDefault<Product>(selectOne);
 
             Console.WriteLine(product);
-           
+
+             */
+
+            /* Execute Scallar
+              
+             var selectAgregat = "Select count(id) from m_product GROUP BY product_name";
+             var selectName = "Select product_name from m_product";
+
+             var count = connection.ExecuteScalar<int>(selectAgregat);
+             var name = connection.ExecuteScalar<string>(selectName);
+
+             Console.WriteLine(name);
+            */
+
+            /* Execute Reader
+            var select = "SELECT * FROM m_product";
+
+            var reader = connection.ExecuteReader(select);
+
+            while (reader.Read())
+            {
+                Console.WriteLine(new Product
+                {
+                    Id = Convert.ToInt32(reader["id"]),
+                    ProductName = reader["product_name"].ToString(),
+                    ProductPrice = Convert.ToInt32(reader["product_price"]),
+                    Stock = Convert.ToInt32(reader["stock"]),
+                });
+            }
+            */
+
+            /*
+             Parameter Dapper
+            - Anonymous Parameters
+            - Dynamic Parameters
+
+            var product = new Product {
+                Id = 5,
+                ProductName = "Tas",
+                ProductPrice = 200000,
+                Stock = 21
+            };
+
+            // Anonymous Parameter with Anonymous Object
+            var productParams = new
+            {
+                id = product.Id,
+                productName = product.ProductName,
+                productPrice = product.ProductPrice,
+                stock = product.Stock
+            };
+
+            //Dynamic Parameters
+            var dynamicParameters = new DynamicParameters(product);
+
+            var sql = @"INSERT INTO m_product (id , product_name, product_price, stock)
+                VALUES (@id, @productName, @productPrice, @stock)";
+            connection.Execute(sql, product);
+
+             */
+
+            var sql = "SELECT * FROM m_product WHERE product_price > @productPrice";
+            var products = connection.Query<Product>(sql, new
+            {
+                productPrice = 100000
+            }).ToList();
+
+            products.ForEach(Console.WriteLine);
+
+
         }
     }
 }

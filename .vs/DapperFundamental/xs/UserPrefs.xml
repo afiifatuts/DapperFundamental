@@ -1,10 +1,9 @@
 ﻿<Properties StartupConfiguration="{A36B29EC-0F1D-4477-A1E0-E3B169EA30F9}|Default">
   <MonoDevelop.Ide.ItemProperties.DapperFundamental PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Library/Caches/VisualStudio/8.0/Symbols/DapperLib/Dapper/20d81380cac6452ad56d7635f578e3912d577080/Dapper/SqlMapper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DapperFundamental/Program.cs">
     <Files>
-      <File FileName="DapperFundamental/Program.cs" Line="51" Column="51" />
-      <File FileName="DapperFundamental/Product.cs" Line="15" Column="10" />
-      <File FileName="../../../../Library/Caches/VisualStudio/8.0/Symbols/DapperLib/Dapper/20d81380cac6452ad56d7635f578e3912d577080/Dapper/SqlMapper.cs" Line="3878" Column="1" />
+      <File FileName="DapperFundamental/Program.cs" Line="134" Column="44" />
+      <File FileName="DapperFundamental/Product.cs" Line="8" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
